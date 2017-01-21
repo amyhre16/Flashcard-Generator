@@ -1,19 +1,19 @@
+"use strict";
+
 function BasicCard(front, back) {
-	if (this instanceof BasicCard) {
-		this.front = front;
-		this.back = back;
-	}
-	else {
+	if (!(this instanceof BasicCard)) {
 		return new BasicCard(front, back);
 	}
+
+	this.front = front;
+	this.back = back;
 }
 
 function ClozeCard(text, cloze) {
-	if (this instanceof ClozeCard) {
-		this.text = text;
-		this.cloze = cloze;
-	}
-	else {
+	if (!(this instanceof ClozeCard)) {
 		return new ClozeCard(text, cloze);
 	}
+
+	this.text = text;
+	this.cloze = cloze;
 }
